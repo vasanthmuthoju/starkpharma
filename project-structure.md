@@ -1,7 +1,7 @@
 # CEIPAL-Style Recruiting Platform - Project Documentation
 
 ## Overview
-A modern, AI-powered recruiting and workforce management platform built with React, TypeScript, and Tailwind CSS. The entire design system is derived from the Stark Pharma logo colors.
+A modern, AI-powered recruiting and workforce management platform built with React, JavaScript, and Tailwind CSS. The entire design system is derived from the Stark Pharma logo colors.
 
 ## Color Palette (Extracted from Logo)
 
@@ -25,32 +25,32 @@ src/
 │   └── logo.webp                 # Stark Pharma logo
 ├── components/
 │   ├── ui/                       # shadcn/ui components
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── input.tsx
+│   │   ├── button.jsx
+│   │   ├── card.jsx
+│   │   ├── input.jsx
 │   │   └── ... (other UI components)
-│   ├── Navbar.tsx                # Global navigation with responsive menu
-│   ├── Hero.tsx                  # Homepage hero section with stats
-│   ├── Features.tsx              # Feature cards showcase
-│   └── Footer.tsx                # Global footer with links
+│   ├── Navbar.jsx                # Global navigation with responsive menu
+│   ├── Hero.jsx                  # Homepage hero section with stats
+│   ├── Features.jsx              # Feature cards showcase
+│   └── Footer.jsx                # Global footer with links
 ├── pages/
-│   ├── Index.tsx                 # Homepage (Hero + Features)
-│   ├── Features.tsx              # Detailed features page
-│   ├── AIRecruiting.tsx          # AI recruiting capabilities
-│   ├── ATS.tsx                   # Applicant Tracking System
-│   ├── Workforce.tsx             # Workforce management modules
-│   ├── Dashboard.tsx             # Analytics dashboard preview
-│   ├── Login.tsx                 # Authentication page
-│   ├── Signup.tsx                # Registration with benefits
-│   └── NotFound.tsx              # 404 page
+│   ├── Index.jsx                 # Homepage (Hero + Features)
+│   ├── Features.jsx              # Detailed features page
+│   ├── AIRecruiting.jsx          # AI recruiting capabilities
+│   ├── ATS.jsx                   # Applicant Tracking System
+│   ├── Workforce.jsx             # Workforce management modules
+│   ├── Dashboard.jsx             # Analytics dashboard preview
+│   ├── Login.jsx                 # Authentication page
+│   ├── Signup.jsx                # Registration with benefits
+│   └── NotFound.jsx              # 404 page
 ├── hooks/
-│   ├── use-mobile.tsx            # Mobile breakpoint detection
-│   └── use-toast.ts              # Toast notifications
+│   ├── use-mobile.jsx            # Mobile breakpoint detection
+│   └── use-toast.js              # Toast notifications
 ├── lib/
-│   └── utils.ts                  # Utility functions (cn)
-├── App.tsx                       # Main app with routing
+│   └── utils.js                  # Utility functions (cn)
+├── App.jsx                       # Main app with routing
 ├── index.css                     # Design system & CSS variables
-└── main.tsx                      # App entry point
+└── main.jsx                      # App entry point
 ```
 
 ## Page Descriptions
@@ -117,7 +117,7 @@ All colors defined in `src/index.css` using HSL values:
 
 ### Usage in Components
 Always use semantic tokens:
-```tsx
+```jsx
 // ✅ Correct - Using design tokens
 <div className="bg-primary text-primary-foreground">
 <div className="bg-gradient-primary shadow-glow-primary">
@@ -142,26 +142,26 @@ Extended in `tailwind.config.ts`:
 ## Component Patterns
 
 ### Cards
-```tsx
+```jsx
 <Card className="p-8 hover:shadow-glow-primary transition-all duration-300 border-2 hover:border-primary/50">
 ```
 
 ### Buttons with Gradients
-```tsx
+```jsx
 <Button className="bg-gradient-primary shadow-glow-primary">
   Start Free Trial
 </Button>
 ```
 
 ### Icon Containers
-```tsx
+```jsx
 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary mb-6">
   <Icon size={28} />
 </div>
 ```
 
 ### Animated Elements
-```tsx
+```jsx
 <div className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
 ```
 
@@ -218,7 +218,7 @@ Extended in `tailwind.config.ts`:
 - `scale-in`: Scale and opacity
 
 ### Usage
-```tsx
+```jsx
 className="animate-fade-in"
 className="animate-slide-up delay-200"
 className="hover:scale-105 transition-transform duration-300"
@@ -230,7 +230,7 @@ className="hover:scale-105 transition-transform duration-300"
 2. **Accessibility**: ARIA labels, keyboard navigation support
 3. **Performance**: Lazy loading candidates, optimized images
 4. **SEO**: Proper meta tags in index.html, semantic structure
-5. **Type Safety**: TypeScript throughout
+5. **Code Quality**: JavaScript with best practices throughout
 6. **Code Organization**: Clear separation of concerns
 7. **Design Consistency**: All colors from design system
 
@@ -290,7 +290,7 @@ npm run preview
 ## Technologies Used
 
 - **React 18**: UI framework
-- **TypeScript**: Type safety
+- **JavaScript**: Modern ES6+ syntax
 - **Vite**: Build tool and dev server
 - **Tailwind CSS**: Utility-first styling
 - **shadcn/ui**: Component library
